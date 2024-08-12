@@ -27,4 +27,4 @@ Budget Navigator is a finance dashboard project aimed at providing users with vi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/budget-navigator.git
+   git clone https://github.com/smit455/budget-navigator.git
