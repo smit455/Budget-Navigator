@@ -28,12 +28,9 @@ app.use("/product",productRoutes);
 app.use("/transaction",transactionsRoutes);
 
 // console.log("hiiiiii");
-
+console.log(process.env.MONGO_URL)
 const PORT=process.env.PORT || 9000;
-mongoose.connect(process.env.MONGO_URL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-})
+mongoose.connect(process.env.MONGO_URL)
 .then(async()=>{
     app.listen(PORT,()=>console.log(`server port: ${PORT}`));
 
