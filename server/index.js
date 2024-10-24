@@ -21,7 +21,13 @@ app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type','Authorization','multipart/form-data'],
+    optionsSuccessStatus: 200, 
+  };
+app.use(cors(corsOptions));
 
 app.use("/kpi",kpiRoutes);
 app.use("/product",productRoutes);

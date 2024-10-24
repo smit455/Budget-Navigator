@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import BoxHeader from '@/components/BoxHeader';
 import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween';
 import { useGetKpisQuery, useGetProductsQuery } from '@/state/api';
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@mui/material';
 import { Box, Typography } from '@mui/material';
 import { useMemo } from 'react';
 import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts';
@@ -14,6 +15,9 @@ const pieData = [
 
 const Row2 = () => {
   const {palette}=useTheme();
+  
+  const theme=useTheme();
+  const tertiaryColor = theme.palette.tertiary[500];
   const pieColors = [palette.primary[800], palette.primary[300]];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();

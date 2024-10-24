@@ -1,13 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import BoxHeader from '@/components/BoxHeader';
 import DashboardBox from '@/components/DashboardBox'
 import { useGetKpisQuery } from '@/state/api'
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@mui/material';
 import { useMemo } from 'react';
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 
 const Row1 = () => {
   const { palette }=useTheme();
+  const theme=useTheme();
+  const tertiaryColor = theme.palette.tertiary[500];
+
     const {data}=useGetKpisQuery();
 
     const revenueExpenses = useMemo(()=>{
