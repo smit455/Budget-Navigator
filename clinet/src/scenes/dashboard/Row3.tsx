@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import BoxHeader from '@/components/BoxHeader';
 import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween';
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api';
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@mui/material';
 import { Box, Typography } from '@mui/material';
 import { DataGrid, GridCellParams } from '@mui/x-data-grid';
 import { useMemo } from 'react';
@@ -10,6 +11,9 @@ import { Cell, Pie, PieChart } from 'recharts';
 
 const Row3 = () => {
   const {palette}=useTheme();
+  
+  const theme=useTheme();
+  const tertiaryColor = theme.palette.tertiary[500];
   const pieColors = [palette.primary[800], palette.primary[500]];
   const {data:kpiData}=useGetKpisQuery();
   const {data:productData}=useGetProductsQuery();
