@@ -9,9 +9,6 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart,
 
 const Row1 = () => {
   const { palette }=useTheme();
-  const theme=useTheme();
-  const tertiaryColor = theme.palette.tertiary[500];
-
     const {data}=useGetKpisQuery();
 
     const revenueExpenses = useMemo(()=>{
