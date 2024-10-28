@@ -11,9 +11,6 @@ import { Cell, Pie, PieChart } from 'recharts';
 
 const Row3 = () => {
   const {palette}=useTheme();
-  
-  const theme=useTheme();
-  const tertiaryColor = theme.palette.tertiary[500];
   const pieColors = [palette.primary[800], palette.primary[500]];
   const {data:kpiData}=useGetKpisQuery();
   const {data:productData}=useGetProductsQuery();
