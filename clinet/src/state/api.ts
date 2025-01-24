@@ -2,7 +2,7 @@ import { createApi,fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { GetKpisResponse,GetProductsResponse,GetTransactionsResponse } from "./types";
 
 export const api = createApi({
-    baseQuery:fetchBaseQuery({baseUrl:'http://localhost:1337'}),
+    baseQuery:fetchBaseQuery({baseUrl:'https://budget-navigator-5.onrender.com'}),
     reducerPath:"main",
     tagTypes:["Kpis","Products","Transactions"],
     endpoints:(build)=>({
