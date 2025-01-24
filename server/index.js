@@ -22,7 +22,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://budget-navigator-29am.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type','Authorization','multipart/form-data'],
     optionsSuccessStatus: 200, 
