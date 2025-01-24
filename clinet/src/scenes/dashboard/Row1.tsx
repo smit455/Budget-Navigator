@@ -10,6 +10,7 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart,
 const Row1 = () => {
   const { palette }=useTheme();
     const {data}=useGetKpisQuery();
+    console.log("first",palette);
 
     const revenueExpenses = useMemo(()=>{
       return(

@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react"
-import { themeSettings } from "./assets/theme"
+import { themeSettings } from "./theme"
 import { CssBaseline,ThemeProvider,Box } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "@/scenes/navbar";
