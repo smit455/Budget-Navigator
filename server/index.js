@@ -40,6 +40,8 @@ mongoose.connect(process.env.MONGO_URL)
 .then(async()=>{
     app.listen(PORT,()=>console.log(`server port: ${PORT}`));
 
+    // only one time use when we connect the application
+
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
     // Product.insertMany(products)
